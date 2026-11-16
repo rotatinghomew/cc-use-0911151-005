@@ -95,3 +95,42 @@ def verify_bundle(output: str | Path) -> list[str]:
         if stable_hash(value) != expected:
             errors.append(f"{name} hash mismatch")
     return errors
+
+
+def export_backtest_bundle(output: str | Path, report: Mapping[str, Any]) -> dict[str, Any]:
+    """写出滚动回测产物：总体误差、口岸×货类分段、推荐证据、失效清单。"""
+    root = ensure_output(output)
+    files = {
+        "backtest-overall.json": write_json(root / "backtest-overall.json", report.get("overall", {})),
+        "backtest-segments.json": write_json(root / "backtest-segments.json", report.get("segments", {})),
+        "backtest-recommendations.json": write_json(
+            root / "backtest-recommendations.json", report.get("recommendations", [])),
+        "backtest-stale-forecasts.json": write_json(
+            root / "backtest-stale-forecasts.json", report.get("stale_forecasts", [])),
+    }
+    manifest = {"files": files, "model_version": report.get("model_version"),
+                "run_id": report.get("run_id"), "stream_fingerprint": report.get("stream_fingerprint"),
+                "created_at": utc_now()}
+    manifest["manifest_hash"] = stable_hash(manifest)
+    write_json(root / "backtest-manifest.json", manifest)
+    return manifest
+
+
+def verify_backtest_bundle(output: str | Path) -> list[str]:
+    root = Path(output)
+    manifest_path = root / "backtest-manifest.json"
+    if not manifest_path.is_file():
+        return ["backtest-manifest.json is missing"]
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    expected = manifest.pop("manifest_hash", "")
+    errors = []
+    if stable_hash(manifest) != expected:
+        errors.append("backtest manifest hash mismatch")
+    for name, want in manifest.get("files", {}).items():
+        path = root / name
+        if not path.is_file():
+            errors.append(f"{name} is missing")
+            continue
+        if stable_hash(json.loads(path.read_text(encoding="utf-8"))) != want:
+            errors.append(f"{name} hash mismatch")
+    return errors

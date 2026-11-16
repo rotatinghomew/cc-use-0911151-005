@@ -1,0 +1,819 @@
+{
+  "scenario": "eta-rolling-backtest",
+  "synthetic": true,
+  "events": [
+    {
+      "shipment_id": "J-pi-ge-00",
+      "kind": "observation",
+      "occurred_at": "2026-11-01T01:00:00+00:00",
+      "observed_at": "2026-11-01T01:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 1,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 105.0,
+        "border_queue": 47,
+        "warehouse_load": 0.42,
+        "temperature": 23.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 2,
+        "event_sequence": 1,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-pi-ge-00",
+      "kind": "outcome",
+      "occurred_at": "2026-11-01T03:00:00+00:00",
+      "observed_at": "2026-11-01T03:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 101,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "general",
+        "actual_eta_min": 118.8
+      }
+    },
+    {
+      "shipment_id": "J-pi-ge-01",
+      "kind": "observation",
+      "occurred_at": "2026-11-01T04:00:00+00:00",
+      "observed_at": "2026-11-01T04:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 2,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-haiphong",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 117.5,
+        "border_queue": 54,
+        "warehouse_load": 0.54,
+        "temperature": 24.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 3,
+        "event_sequence": 2,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-pi-ge-01",
+      "kind": "outcome",
+      "occurred_at": "2026-11-01T06:00:00+00:00",
+      "observed_at": "2026-11-01T06:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 102,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-haiphong",
+        "cargo_class": "general",
+        "actual_eta_min": 126.1
+      }
+    },
+    {
+      "shipment_id": "J-pi-ge-02",
+      "kind": "observation",
+      "occurred_at": "2026-11-01T07:00:00+00:00",
+      "observed_at": "2026-11-01T07:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 3,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 105.0,
+        "border_queue": 61,
+        "warehouse_load": 0.66,
+        "temperature": 25.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 1,
+        "event_sequence": 3,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-pi-ge-02",
+      "kind": "outcome",
+      "occurred_at": "2026-11-01T09:00:00+00:00",
+      "observed_at": "2026-11-01T09:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 103,
+      "state": "unreachable",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "general",
+        "actual_eta_min": null,
+        "note": "journey ended with unreachable"
+      }
+    },
+    {
+      "shipment_id": "J-pi-ge-03",
+      "kind": "observation",
+      "occurred_at": "2026-11-01T10:00:00+00:00",
+      "observed_at": "2026-11-01T10:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 4,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-haiphong",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 117.5,
+        "border_queue": 68,
+        "warehouse_load": 0.78,
+        "temperature": 26.0,
+        "customs_status": "pending",
+        "capacity_units": 12,
+        "priority": 2,
+        "event_sequence": 4,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-pi-ge-03",
+      "kind": "outcome",
+      "occurred_at": "2026-11-01T12:00:00+00:00",
+      "observed_at": "2026-11-01T12:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 104,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-haiphong",
+        "cargo_class": "general",
+        "actual_eta_min": 114.1
+      }
+    },
+    {
+      "shipment_id": "J-pi-co-00",
+      "kind": "observation",
+      "occurred_at": "2026-11-01T13:00:00+00:00",
+      "observed_at": "2026-11-01T13:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 5,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 105.0,
+        "border_queue": 75,
+        "warehouse_load": 0.3,
+        "temperature": 6.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 3,
+        "event_sequence": 5,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-pi-co-00",
+      "kind": "outcome",
+      "occurred_at": "2026-11-01T15:00:00+00:00",
+      "observed_at": "2026-11-01T15:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 105,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "cold",
+        "actual_eta_min": 120.3
+      }
+    },
+    {
+      "shipment_id": "J-pi-co-01",
+      "kind": "observation",
+      "occurred_at": "2026-11-01T16:00:00+00:00",
+      "observed_at": "2026-11-01T16:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 6,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-haiphong",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 117.5,
+        "border_queue": 82,
+        "warehouse_load": 0.42,
+        "temperature": 7.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 1,
+        "event_sequence": 6,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-pi-co-01",
+      "kind": "outcome",
+      "occurred_at": "2026-11-01T18:00:00+00:00",
+      "observed_at": "2026-11-01T18:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 106,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-haiphong",
+        "cargo_class": "cold",
+        "actual_eta_min": 127.6
+      }
+    },
+    {
+      "shipment_id": "J-pi-co-02",
+      "kind": "observation",
+      "occurred_at": "2026-11-01T19:00:00+00:00",
+      "observed_at": "2026-11-01T19:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 7,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 105.0,
+        "border_queue": 89,
+        "warehouse_load": 0.54,
+        "temperature": 8.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 2,
+        "event_sequence": 7,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-pi-co-02",
+      "kind": "outcome",
+      "occurred_at": "2026-11-01T21:00:00+00:00",
+      "observed_at": "2026-11-01T21:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 107,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "cold",
+        "actual_eta_min": 108.3
+      }
+    },
+    {
+      "shipment_id": "J-pi-co-03",
+      "kind": "observation",
+      "occurred_at": "2026-11-01T22:00:00+00:00",
+      "observed_at": "2026-11-01T22:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 8,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-haiphong",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 117.5,
+        "border_queue": 96,
+        "warehouse_load": 0.66,
+        "temperature": 9.0,
+        "customs_status": "pending",
+        "capacity_units": 12,
+        "priority": 3,
+        "event_sequence": 8,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-pi-co-03",
+      "kind": "outcome",
+      "occurred_at": "2026-11-02T00:00:00+00:00",
+      "observed_at": "2026-11-02T00:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 108,
+      "state": "rerouted",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-haiphong",
+        "cargo_class": "cold",
+        "actual_eta_min": null,
+        "note": "journey ended with rerouted"
+      }
+    },
+    {
+      "shipment_id": "J-ha-ge-00",
+      "kind": "observation",
+      "occurred_at": "2026-11-02T01:00:00+00:00",
+      "observed_at": "2026-11-02T01:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 9,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 140.0,
+        "border_queue": 43,
+        "warehouse_load": 0.78,
+        "temperature": 25.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 1,
+        "event_sequence": 9,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-ha-ge-00",
+      "kind": "outcome",
+      "occurred_at": "2026-11-02T03:00:00+00:00",
+      "observed_at": "2026-11-02T03:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 109,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "general",
+        "actual_eta_min": 170.1
+      }
+    },
+    {
+      "shipment_id": "J-ha-ge-01",
+      "kind": "observation",
+      "occurred_at": "2026-11-02T04:00:00+00:00",
+      "observed_at": "2026-11-02T04:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 10,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-hanoi-vientiane",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 160.0,
+        "border_queue": 50,
+        "warehouse_load": 0.3,
+        "temperature": 26.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 2,
+        "event_sequence": 10,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-ha-ge-01",
+      "kind": "outcome",
+      "occurred_at": "2026-11-02T06:00:00+00:00",
+      "observed_at": "2026-11-02T06:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 110,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-hanoi-vientiane",
+        "cargo_class": "general",
+        "actual_eta_min": 186.9
+      }
+    },
+    {
+      "shipment_id": "J-ha-ge-02",
+      "kind": "observation",
+      "occurred_at": "2026-11-02T07:00:00+00:00",
+      "observed_at": "2026-11-02T07:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 11,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 140.0,
+        "border_queue": 57,
+        "warehouse_load": 0.42,
+        "temperature": 27.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 3,
+        "event_sequence": 11,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-ha-ge-02",
+      "kind": "outcome",
+      "occurred_at": "2026-11-02T09:00:00+00:00",
+      "observed_at": "2026-11-02T09:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 111,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "general",
+        "actual_eta_min": 158.1
+      }
+    },
+    {
+      "shipment_id": "J-ha-ge-03",
+      "kind": "observation",
+      "occurred_at": "2026-11-02T10:00:00+00:00",
+      "observed_at": "2026-11-02T10:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 12,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-hanoi-vientiane",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 160.0,
+        "border_queue": 64,
+        "warehouse_load": 0.54,
+        "temperature": 22.0,
+        "customs_status": "pending",
+        "capacity_units": 12,
+        "priority": 1,
+        "event_sequence": 12,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-ha-ge-03",
+      "kind": "outcome",
+      "occurred_at": "2026-11-02T12:00:00+00:00",
+      "observed_at": "2026-11-02T12:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 112,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-hanoi-vientiane",
+        "cargo_class": "general",
+        "actual_eta_min": 174.9
+      }
+    },
+    {
+      "shipment_id": "J-ha-co-00",
+      "kind": "observation",
+      "occurred_at": "2026-11-02T13:00:00+00:00",
+      "observed_at": "2026-11-02T13:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 13,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 140.0,
+        "border_queue": 71,
+        "warehouse_load": 0.66,
+        "temperature": 9.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 2,
+        "event_sequence": 13,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-ha-co-00",
+      "kind": "outcome",
+      "occurred_at": "2026-11-02T15:00:00+00:00",
+      "observed_at": "2026-11-02T15:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 113,
+      "state": "cold_chain_exception",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "cold",
+        "actual_eta_min": null,
+        "note": "journey ended with cold_chain_exception"
+      }
+    },
+    {
+      "shipment_id": "J-ha-co-01",
+      "kind": "observation",
+      "occurred_at": "2026-11-02T16:00:00+00:00",
+      "observed_at": "2026-11-02T16:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 14,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-hanoi-vientiane",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 160.0,
+        "border_queue": 78,
+        "warehouse_load": 0.78,
+        "temperature": 10.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 3,
+        "event_sequence": 14,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-ha-co-01",
+      "kind": "outcome",
+      "occurred_at": "2026-11-02T18:00:00+00:00",
+      "observed_at": "2026-11-02T18:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 114,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-hanoi-vientiane",
+        "cargo_class": "cold",
+        "actual_eta_min": 188.4
+      }
+    },
+    {
+      "shipment_id": "J-ha-co-02",
+      "kind": "observation",
+      "occurred_at": "2026-11-02T19:00:00+00:00",
+      "observed_at": "2026-11-02T19:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 15,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 140.0,
+        "border_queue": 85,
+        "warehouse_load": 0.3,
+        "temperature": 6.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 1,
+        "event_sequence": 15,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-ha-co-02",
+      "kind": "outcome",
+      "occurred_at": "2026-11-02T21:00:00+00:00",
+      "observed_at": "2026-11-02T21:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 115,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "cold",
+        "actual_eta_min": 159.6
+      }
+    },
+    {
+      "shipment_id": "J-ha-co-03",
+      "kind": "observation",
+      "occurred_at": "2026-11-02T22:00:00+00:00",
+      "observed_at": "2026-11-02T22:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 16,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-hanoi-vientiane",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 160.0,
+        "border_queue": 92,
+        "warehouse_load": 0.42,
+        "temperature": 7.0,
+        "customs_status": "pending",
+        "capacity_units": 12,
+        "priority": 2,
+        "event_sequence": 16,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-ha-co-03",
+      "kind": "outcome",
+      "occurred_at": "2026-11-03T00:00:00+00:00",
+      "observed_at": "2026-11-03T00:00:00+00:00",
+      "revision": 1,
+      "event_sequence": 116,
+      "state": "delivered",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-hanoi-vientiane",
+        "cargo_class": "cold",
+        "actual_eta_min": 176.4
+      }
+    },
+    {
+      "shipment_id": "J-open-01",
+      "kind": "observation",
+      "occurred_at": "2026-11-03T01:00:00+00:00",
+      "observed_at": "2026-11-03T01:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 17,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "nanning-pingxiang-hanoi",
+        "cargo_class": "general",
+        "vehicle_class": "box-truck",
+        "eta_min": 105.0,
+        "border_queue": 99,
+        "warehouse_load": 0.54,
+        "temperature": 27.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 3,
+        "event_sequence": 17,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-open-02",
+      "kind": "observation",
+      "occurred_at": "2026-11-03T02:00:00+00:00",
+      "observed_at": "2026-11-03T02:00:00+00:00",
+      "revision": 1,
+      "is_correction": false,
+      "event_sequence": 18,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 140.0,
+        "border_queue": 46,
+        "warehouse_load": 0.66,
+        "temperature": 9.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 1,
+        "event_sequence": 18,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    },
+    {
+      "shipment_id": "J-open-02",
+      "kind": "observation",
+      "occurred_at": "2026-11-03T05:00:00+00:00",
+      "observed_at": "2026-11-03T05:00:00+00:00",
+      "revision": 2,
+      "is_correction": true,
+      "event_sequence": 19,
+      "state": "booked",
+      "source": "synthetic-backtest",
+      "payload": {
+        "route_code": "kunming-hanoi-vientiane",
+        "cargo_class": "cold",
+        "vehicle_class": "reefer-truck",
+        "eta_min": 140.0,
+        "border_queue": 210,
+        "warehouse_load": 0.78,
+        "temperature": 10.0,
+        "customs_status": "clear",
+        "capacity_units": 12,
+        "priority": 2,
+        "event_sequence": 19,
+        "candidate_routes": [
+          "nanning-pingxiang-hanoi",
+          "nanning-pingxiang-haiphong",
+          "kunming-hanoi-vientiane",
+          "nanning-hanoi-vientiane"
+        ]
+      }
+    }
+  ]
+}
